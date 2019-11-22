@@ -5,6 +5,14 @@ import NewRoutes from './Components/NewRoutes';
 import './App.css';
 
 class App extends Component {
+  constructor(){
+    super();
+
+    this.state = {
+      myRoutes: []
+    }
+  }
+
   render(){
     return (
       <div className="App">

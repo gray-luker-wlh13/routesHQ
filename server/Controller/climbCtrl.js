@@ -1,4 +1,4 @@
-let llcRoutes = [
+let myRoutes = [
     {
         id: 0,
         img: 'https://cdn-files.apstatic.com/climb/112512810_medium_1494309566_topo.jpg',
@@ -23,7 +23,7 @@ let id = 3;
 
 module.exports = {
     climbs: (req, res) => {
-        res.status(200).send(llcRoutes);
+        res.status(200).send(myRoutes);
     },
 
     addClimb: (req, res) => {
@@ -34,32 +34,32 @@ module.exports = {
             name: req.body.name,
             grade: req.body.grade
         }
-    llcRoutes.push(routeObj);
-        res.status(200).send(llcRoutes);
+    myRoutes.push(routeObj);
+        res.status(200).send(myRoutes);
     },
 
     reGrade: (req, res) => {
     //use id params
         const {id} = req.params;
         const {newGrade} = req.body;
-        const index = llcRoutes.findIndex(e => e.id === +id)
-        llcRoutes[index].grade = newGrade;
-        res.status(200).send(llcRoutes);
+        const index = myRoutes.findIndex(e => e.id === +id)
+        myRoutes[index].grade = newGrade;
+        res.status(200).send(myRoutes);
     },
 
     sendClimb: (req, res) => {
     //use id params
         const {id} = req.params;
-        const index = llcRoutes.findIndex(e => e.id === +id)
-        llcRoutes.splice(index, 1);
-        res.status(200).send(llcRoutes);
+        const index = myRoutes.findIndex(e => e.id === +id)
+        myRoutes.splice(index, 1);
+        res.status(200).send(myRoutes);
     },
 
     getClimbs: (req, res) => {
         if(req.query.grade){
-            let climbs = llcRoutes.filter(val => val.grade === req.query.grade)
+            let climbs = myRoutes.filter(val => val.grade === req.query.grade)
             return res.status(200).send(climbs)
         }
-        res.status(200).send(llcRoutes);
+        res.status(200).send(myRoutes);
     }
 }

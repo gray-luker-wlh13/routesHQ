@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  min-height: 120vh;
+  min-height: 150vh;
 }
 
 a {
@@ -14,7 +14,7 @@ a {
 }
 
 .head {
-  height: 386px;
+  height: 440px;
   width: 100vw;
 }
 
@@ -47,5 +47,62 @@ a {
   align-items: center;
 }
 
+#main-img {
+  width: 100vw;
+  height: 350px;
+}
 
+.myClimbs {
+  height: 300px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.routes {
+  height: 440px;
+  width: 100vw;
+  border: 1px black solid;
+  background-color: rgb(210, 210, 210);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} 
+
+.route-containers {
+  height: 325px;
+  /* border: 1px red solid; */
+}
+
+#route-imgs{
+  height: 200px;
+  width: auto;
+  padding: 20px;
+  overflow: hidden;
+}
+
+#route-info{
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  border: 1px rgb(209, 209, 209) solid;
+  color: rgb(210, 210, 210);
+}
+
+.newRoutes {
+  height: 200px;
+  width: 100vw;
+}
+
+.add {
+  height: 200px;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 60px 0px 0px 0px;
+}
 

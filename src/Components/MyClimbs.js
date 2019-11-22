@@ -1,12 +1,11 @@
-import React from 'react';
-import Routes from './Routes';
+import React from "react";
+import Route from "./Route";
 
-const MyClimbs = () => {
-    return (
-        <div className="myClimbs">
-            <Routes />
-        </div>
-    )
-}
+const MyClimbs = props => {
+  let myRoutes = props.myRoutes.map((route, i) => {
+    return <Route key={i} route={route} saveFn={props.saveFn} removeFn={props.removeFn} id={route.id}/>;
+  });
+  return <div className="myClimbs">{myRoutes}</div>;
+};
 
-export default MyClimbs
+export default MyClimbs;

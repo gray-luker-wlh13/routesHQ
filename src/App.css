@@ -14,7 +14,7 @@ a {
 }
 
 .head {
-  height: 440px;
+  height: 510px;
   width: 100vw;
 }
 
@@ -26,7 +26,9 @@ a {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 0px 70px
+  padding: 0px 70px;
+  position: fixed;
+  /* top: 30px; */
 }
 
 #logo {
@@ -49,7 +51,9 @@ a {
 
 #main-img {
   width: 100vw;
-  height: 350px;
+  height: 385px;
+  z-index: 5;
+  margin-top: 65px;
 }
 
 .myClimbs {
@@ -75,7 +79,6 @@ a {
 
 .route-containers {
   height: 325px;
-  /* border: 1px red solid; */
 }
 
 #route-imgs{
@@ -103,6 +106,6 @@ a {
   height: 200px;
   width: 100vw;
   box-sizing: border-box;
-  padding: 60px 0px 0px 0px;
+  margin-top: 100px;
 }
 

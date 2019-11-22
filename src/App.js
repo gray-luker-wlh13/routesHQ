@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Head from './Components/Head';
 import MyClimbs from './Components/MyClimbs';
-import NewRoutes from './Components/NewRoute';
+import NewRoute from './Components/NewRoute';
 import axios from 'axios';
 import './App.css';
 
@@ -60,7 +60,7 @@ class App extends Component {
           saveFn={this.saveGrade}
           removeFn={this.removeRoute}
           />
-        <NewRoutes />
+        <NewRoute />
       </div>
     );
   }

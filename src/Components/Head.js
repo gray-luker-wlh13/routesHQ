@@ -2,7 +2,7 @@ import React from 'react';
 
 const Head = () => {
     return (
-        <div className="head">
+        <header className="head">
             <div id="head-bar">
                 <div id="logo">RHQ</div>
                     <nav id="link-container">
@@ -11,7 +11,7 @@ const Head = () => {
                     </nav>
             </div>
             <img src='https://www.climbing.com/.image/t_share/MTQ5NjgyMDYxMDgxMzIyOTcy/fullsizerender-31.jpg' alt='climber' id="main-img"/>
-        </div>
+        </header>
     )
 }
 

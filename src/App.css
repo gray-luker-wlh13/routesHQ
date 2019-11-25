@@ -14,6 +14,18 @@ a {
   padding: 5px 5px 0px 5px;
 }
 
+ul {
+  list-style-type: none;
+  width: 100px;
+  height: 400px;
+  background-color: rgb(209, 209, 209);
+  font-weight: bold;
+  animation-name: menu;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
 .head {
   height: 510px;
   width: 100vw;
@@ -57,8 +69,10 @@ a {
 }
 
 .myClimbs {
-  height: 300px;
+  height: 450px;
   width: 100vw;
+  border: 1px black solid;
+  background-color: rgb(210, 210, 210);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -68,8 +82,6 @@ a {
 .routes {
   height: 440px;
   width: 100vw;
-  border: 1px black solid;
-  background-color: rgb(210, 210, 210);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -123,16 +135,20 @@ a {
   
 }
 
-.filter {
-  height: 1px;
-  width: 100vw;
-  padding: 180px 0px 0px 0px;
-  margin-bottom: 0px;
-  color: rgb(209, 209, 209);
+#filter {
+  height: 440px;
+  width: 400px;
+}
+
+.button{
+  width: 50px;
+  height: 4px;
+  border: 1px black solid;
+  padding: 12px;
+  font-weight: bold;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-content: flex-end;
+  align-items: center;
 }
 
 #footer {
@@ -164,5 +180,15 @@ a {
 
   100% {
     background-color: rgb(34, 177, 96);
+  }
+}
+
+@keyframes menu {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 400px;
   }
 }

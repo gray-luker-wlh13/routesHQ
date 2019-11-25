@@ -11,19 +11,17 @@ class Add extends Component {
         }
     }
 
-    handleChange = (val) => {
+    handleChange = (e) => {
         this.setState({
-            img: val,
-            name: val,
-            grade: val
+            [e.target.name]: e.target.value
         })
     }
 
     createRoute = () => {
         this.props.addFn({
-            img: this.props.routeList.img,
-            name: this.props.routeList.name,
-            grade: this.props.routeList.grade
+            img: this.state.img,
+            name: this.state.name,
+            grade: this.state.grade
         })
         this.setState({
             img: '',
@@ -37,13 +35,22 @@ class Add extends Component {
             <div className="add">
                 <form className="add-container">
                     <div>
-                        Image: <input onChange={(e) => this.handleChange(e.target.value)}/>
+                        Image: <input 
+                            name='img'
+                            value={this.state.img}
+                            onChange={(e) => this.handleChange(e)}/>
                     </div>
                     <div>
-                        Name: <input onChange={(e) => this.handleChange(e.target.value)}/>
+                        Name: <input 
+                            name='name'
+                            value={this.state.name}
+                            onChange={(e) => this.handleChange(e)}/>
                     </div>
                     <div>
-                        Grade: <input onChange={(e) => this.handleChange(e.target.value)}/>
+                        Grade: <input 
+                            name='grade'
+                            value={this.state.grade}
+                            onChange={(e) => this.handleChange(e)}/>
                     </div>
                     <div>
                         <button onClick={() => this.createRoute()}>Add Climb</button>

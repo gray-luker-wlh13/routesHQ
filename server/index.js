@@ -13,4 +13,4 @@ app.delete('/api/routes/:id', cc.sendClimb);
 app.get('/api/route', cc.getClimbs);
 
 const PORT = 4020;
-app.listen(PORT, () => console.log(gradient.cristal(`Blaze it on port ${PORT}`)));
+app.listen(PORT, () => console.log(gradient.cristal(`Keeping it green on port ${PORT}`)));

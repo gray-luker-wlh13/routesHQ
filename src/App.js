@@ -50,8 +50,17 @@ class App extends Component {
     .catch(err => console.log(err))
   }
 
+  getRoute = (id) => {
+    console.log(this.state.myRoutes, id)
+    axios.get(`/api/route?grade=${this.state.myRoutes[id].grade}`).then(res => {
+      this.setState({
+        myRoutes: res.data
+      })
+    })
+    .catch(err => console.log(err))
+  }
+
   render(){
-    console.log(this.state.myRoutes)
     return (
       <div className="App">
         <Head />
@@ -61,7 +70,11 @@ class App extends Component {
           removeFn={this.removeRoute}
           />
         <NewRoute addFn={this.addRoute}
-          myRoutes={this.state.myRoutes}/>
+          myRoutes={this.state.myRoutes}
+          getFn={this.getRoute}/>
+        <footer id="footer">
+          <div id="footer-container">Go send some Sick Routes!!</div>
+        </footer>
       </div>
     );
   }

@@ -4,7 +4,7 @@ import Add from './Add';
 const NewRoutes = (props) => {
     return (
         <div className="newRoutes">
-            <Add routeList={props.myRoutes} addFn={props.addFn}/>
+            <Add routeList={props.myRoutes} addFn={props.addFn} getFn={props.getFn}/>
         </div>
     )
 }

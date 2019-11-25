@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  min-height: 150vh;
+  min-height: 120vh;
   background-color: rgb(54, 49, 49);
 }
 
@@ -123,5 +123,34 @@ a {
   
 }
 
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+#footer-container {
+  height: 65px;
+  width: 100vw;
+  background-color: rgb(85, 80, 80);
+  color: rgb(210, 210, 210);
+  text-decoration-line: underline;
+  text-decoration-color: rgb(34, 177, 96);
+  animation-name: color-change;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
 
+@keyframes color-change {
+  0% {
+    background-color: rgb(34, 177, 96);
+  }
+
+  50% {
+    background-color: rgb(2, 173, 173);
+  }
+
+  100% {
+    background-color: rgb(34, 177, 96);
+  }
+}

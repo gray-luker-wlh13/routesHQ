@@ -57,7 +57,7 @@ module.exports = {
 
     getClimbs: (req, res) => {
         if(req.query.grade){
-            let climbs = myRoutes.filter(val => val.grade === req.query.grade)
+            let climbs = myRoutes.filter(val => val.grade <= req.query.grade)
             return res.status(200).send(climbs)
         }
         res.status(200).send(myRoutes);

@@ -22,15 +22,15 @@ class Add extends Component {
     render(){
         return (
             <div className="add">
-                <form>
+                <form className="add-container">
                     <div>
-                        Image: <input />
+                        Image: <input onChange={(e) => this.handleChange(e.target.value)}/>
                     </div>
                     <div>
-                        Name: <input />
+                        Name: <input onChange={(e) => this.handleChange(e.target.value)}/>
                     </div>
                     <div>
-                        Grade: <input />
+                        Grade: <input onChange={(e) => this.handleChange(e.target.value)}/>
                     </div>
                     <div>
                         <button>Add Climb</button>

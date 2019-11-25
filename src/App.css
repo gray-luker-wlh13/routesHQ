@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   min-height: 150vh;
+  background-color: rgb(54, 49, 49);
 }
 
 a {
@@ -99,6 +100,8 @@ a {
 .newRoutes {
   height: 200px;
   width: 100vw;
+  background-color: rgb(54, 49, 49);
+  border: 1px rgb(209, 209, 209);
 }
 
 .add {
@@ -106,5 +109,19 @@ a {
   width: 100vw;
   box-sizing: border-box;
   margin-top: 100px;
+  border: 1px rgb(209, 209, 209);
+  color: rgb(210, 210, 210);
+  
 }
+
+.add-container {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+
 

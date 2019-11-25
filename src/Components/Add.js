@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Filter from './Filter';
 
 class Add extends Component {
     constructor(props){
@@ -35,7 +34,6 @@ class Add extends Component {
         return (
             <div className="add">
                 <div className="filterContainer">
-                    <Filter routeList={this.props.routeList}/>
                 </div>
                 <form className="add-container">
                     <div>

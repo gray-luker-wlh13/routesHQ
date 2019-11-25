@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Head from './Components/Head';
 import MyClimbs from './Components/MyClimbs';
 import NewRoute from './Components/NewRoute';
+import Filter from './Components/Filter';
 import axios from 'axios';
 import './App.css';
 
@@ -61,6 +62,11 @@ class App extends Component {
   }
 
   render(){
+    let routeList = this.state.myRoutes.map((e, i) => {
+      return (
+        <Filter key={i}/>
+      )
+  })
     return (
       <div className="App">
         <Head />
@@ -69,9 +75,14 @@ class App extends Component {
           saveFn={this.saveGrade}
           removeFn={this.removeRoute}
           />
+          <Filter
+            key={routeList} 
+            myRoutes={this.state.myRoutes}
+            getFn={this.getRoute}
+          />
         <NewRoute addFn={this.addRoute}
           myRoutes={this.state.myRoutes}
-          getFn={this.getRoute}/>
+        />
         <footer id="footer">
           <div id="footer-container">Go send some Sick Routes!!</div>
         </footer>

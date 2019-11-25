@@ -30,7 +30,7 @@ class Filter extends Component {
                 <b>Filter: </b><input onChange={e => this.handleInputChange(e.target.value)}/>
                 </div>
                 <div className="filter-handles">
-                    <button onClick={() => this.props.getFn()}>Filter</button>
+                    <button onClick={() => this.props.getFn(this.props.key)}>Filter</button>
                 </div>
             </div>
         )

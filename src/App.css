@@ -123,6 +123,18 @@ a {
   
 }
 
+.filter {
+  height: 1px;
+  width: 100vw;
+  padding: 180px 0px 0px 0px;
+  margin-bottom: 0px;
+  color: rgb(209, 209, 209);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-end;
+}
+
 #footer {
   display: flex;
   justify-content: center;

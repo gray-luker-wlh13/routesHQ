@@ -60,7 +60,8 @@ class App extends Component {
           saveFn={this.saveGrade}
           removeFn={this.removeRoute}
           />
-        <NewRoute />
+        <NewRoute addFn={this.addRoute}
+          myRoutes={this.state.myRoutes}/>
       </div>
     );
   }

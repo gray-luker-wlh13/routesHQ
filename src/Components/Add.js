@@ -19,6 +19,19 @@ class Add extends Component {
         })
     }
 
+    createRoute = () => {
+        this.props.addFn({
+            img: this.props.routeList.img,
+            name: this.props.routeList.name,
+            grade: this.props.routeList.grade
+        })
+        this.setState({
+            img: '',
+            name: '',
+            grade: ''
+        })
+    }
+
     render(){
         return (
             <div className="add">
@@ -33,7 +46,7 @@ class Add extends Component {
                         Grade: <input onChange={(e) => this.handleChange(e.target.value)}/>
                     </div>
                     <div>
-                        <button>Add Climb</button>
+                        <button onClick={() => this.createRoute()}>Add Climb</button>
                     </div>
                 </form>
             </div>

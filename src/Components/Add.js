@@ -31,6 +31,7 @@ class Add extends Component {
     }
 
     render(){
+        const {img, name, grade} = this.state;
         return (
             <div className="add">
                 <div className="filterContainer">
@@ -39,19 +40,19 @@ class Add extends Component {
                     <div>
                         Image: <input 
                             name='img'
-                            value={this.state.img}
+                            value={img}
                             onChange={(e) => this.handleChange(e)}/>
                     </div>
                     <div>
                         Name: <input 
                             name='name'
-                            value={this.state.name}
+                            value={name}
                             onChange={(e) => this.handleChange(e)}/>
                     </div>
                     <div>
                         Grade: <input 
                             name='grade'
-                            value={this.state.grade}
+                            value={grade}
                             onChange={(e) => this.handleChange(e)}/>
                     </div>
                     <div>
